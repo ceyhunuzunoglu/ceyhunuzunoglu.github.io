@@ -12121,18 +12121,18 @@
  &nbsp;&nbsp;<strong>Conforms to</strong> NSCoding<br />
  &nbsp;&nbsp;<strong>Declared in</strong> PTRLocation.h  </p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Class to represent an<a href="#y">y</a> inside/outside location</p>
+<p>Class to represent any inside/outside location</p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
 <h3 id="facilityid">facilityId<a class="headerlink" href="#facilityid" title="Permanent link">&para;</a></h3>
 <p>facilityId
-Internal identifier of location&rsquo;s facilit<a href="#y">y</a></p>
+Internal identifier of location&rsquo;s facility</p>
 <div class="codehilite"><pre><span></span><span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span> <span class="k">readonly</span><span class="p">)</span> <span class="kt">int</span> <span class="n">facilityId</span>
 </pre></div>
 
 <h3 id="lat">lat<a class="headerlink" href="#lat" title="Permanent link">&para;</a></h3>
 <p>lat
 Geographic latitude coordinate
-INVALID_GEO_POSITION b<a href="#y">y</a> default</p>
+INVALID_GEO_POSITION by default</p>
 <details class="warning" open="open"><summary>Warning</summary><p>It might not be possible to calculate latitude</p>
 </details>
 <div class="codehilite"><pre><span></span><span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span> <span class="k">readonly</span><span class="p">)</span> <span class="kt">double</span> <span class="n">lat</span>
@@ -12147,7 +12147,7 @@ Level / Floor number</p>
 <h3 id="lon">lon<a class="headerlink" href="#lon" title="Permanent link">&para;</a></h3>
 <p>lon
 Geographic longitude coordinate
-INVALID_GEO_POSITION b<a href="#y">y</a> default</p>
+INVALID_GEO_POSITION by default</p>
 <details class="warning" open="open"><summary>Warning</summary><p>It might not be possible to calculate longitude</p>
 </details>
 <div class="codehilite"><pre><span></span><span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span> <span class="k">readonly</span><span class="p">)</span> <span class="kt">double</span> <span class="n">lon</span>
@@ -12160,14 +12160,14 @@ Internal identifier of location&rsquo;s venue</p>
 </pre></div>
 
 <h3 id="x">x<a class="headerlink" href="#x" title="Permanent link">&para;</a></h3>
-<p>x
-X coordinate in [0,1) (if inside facilit<a href="#y">y</a>)
-INVALID_POSITION b<a href="#y">y</a> default</p>
+<p>x [HIDDEN]
+X coordinate in [0,1) (if inside facility)
+INVALID_POSITION by default</p>
 <div class="codehilite"><pre><span></span><span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span> <span class="k">readonly</span><span class="p">)</span> <span class="kt">float</span> <span class="n">x</span>
 </pre></div>
 
 <h3 id="y">y<a class="headerlink" href="#y" title="Permanent link">&para;</a></h3>
-<p>y
+<p>y [HIDDEN]
 Y coordinate in [0,1) (if inside facility)
 INVALID_POSITION by default</p>
 <div class="codehilite"><pre><span></span><span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span> <span class="k">readonly</span><span class="p">)</span> <span class="kt">float</span> <span class="n">y</span>
@@ -12189,7 +12189,7 @@ Sets all values to invalid values</p>
 <ul>
 <li>A PTRLocation object</li>
 </ul>
-<p>Can be used for setting onl<a href="#y">y</a> specific fields after init with this method.</p>
+<p>Can be used for setting only specific fields after init with this method.</p>
 <h3 id="initwithxylatlonlevelvenueidfacilityid">initWithX:y:lat:lon:level:venueId:facilityId:<a class="headerlink" href="#initwithxylatlonlevelvenueidfacilityid" title="Permanent link">&para;</a></h3>
 <p>Initialiser for Location object with coordinates</p>
 <div class="codehilite"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">instancetype</span><span class="p">)</span><span class="nf">initWithX:</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">*</span> <span class="nl">y</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="o">*</span> <span class="nl">lat</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="o">*</span><span class="n">lat</span><span class="o">*</span> <span class="nl">lon</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="o">*</span><span class="n">lon</span><span class="o">*</span> <span class="nl">level</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="o">*</span><span class="n">level</span><span class="o">*</span> <span class="nl">venueId</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="o">*</span><span class="n">venueId</span><span class="o">*</span> <span class="nl">facilityId</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="o">*</span><span class="n">facilityId</span><span class="o">*</span>
@@ -12209,13 +12209,13 @@ of location  </p>
 <p><em>venueId</em><br />
 internal identifier of location&rsquo;s venue  </p>
 <p><em>facilityId</em><br />
-internal identifier of location&rsquo;s facilit<a href="#y">y</a>  </p>
+internal identifier of location&rsquo;s facility  </p>
 <p><strong>Returns:</strong></p>
 <ul>
 <li>A PTRLocation object</li>
 </ul>
 <h3 id="initwithxylevelvenueidfacilityid">initWithX:y:level:venueId:facilityId:<a class="headerlink" href="#initwithxylevelvenueidfacilityid" title="Permanent link">&para;</a></h3>
-<p>Initialiser for Location object with internal-onl<a href="#y">y</a> coordinates</p>
+<p>Initialiser for Location object with internal-only coordinates</p>
 <div class="codehilite"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">instancetype</span><span class="p">)</span><span class="nf">initWithX:</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="o">*</span> <span class="nl">y</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="o">*</span> <span class="nl">level</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="o">*</span><span class="n">level</span><span class="o">*</span> <span class="nl">venueId</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="o">*</span><span class="n">venueId</span><span class="o">*</span> <span class="nl">facilityId</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="o">*</span><span class="n">facilityId</span><span class="o">*</span>
 </pre></div>
 
@@ -12229,13 +12229,13 @@ of location  </p>
 <p><em>venueId</em><br />
 internal identifier of location&rsquo;s venue  </p>
 <p><em>facilityId</em><br />
-internal identifier of location&rsquo;s facilit<a href="#y">y</a>  </p>
+internal identifier of location&rsquo;s facility  </p>
 <p><strong>Returns:</strong></p>
 <ul>
 <li>A PTRLocation object</li>
 </ul>
 <h3 id="isvalid">isValid<a class="headerlink" href="#isvalid" title="Permanent link">&para;</a></h3>
-<p>Returns valid b<a href="#y">y</a> checking <a href="#x">x</a> <a href="#y">y</a> and <a href="#level">level</a> and facilit<a href="#y">y</a></p>
+<p>Returns valid by checking <a href="#x">x</a> <a href="#y">y</a> and <a href="#level">level</a> and facility</p>
 <div class="codehilite"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">isValid</span>
 </pre></div>
 
@@ -12244,8 +12244,8 @@ internal identifier of location&rsquo;s facilit<a href="#y">y</a>  </p>
 <li>return valid if no field has an invalid value</li>
 </ul>
 <h3 id="isvalidexceptvenuefacility">isValidExceptVenueFacility<a class="headerlink" href="#isvalidexceptvenuefacility" title="Permanent link">&para;</a></h3>
-<p>Returns valid b<a href="#y">y</a> checking <a href="#x">x</a> <a href="#y">y</a> and <a href="#level">level</a></p>
-<details class="warning" open="open"><summary>Warning</summary><p>it does not check facilit<a href="#y">y</a> or venue</p>
+<p>Returns valid by checking <a href="#x">x</a> <a href="#y">y</a> and <a href="#level">level</a></p>
+<details class="warning" open="open"><summary>Warning</summary><p>it does not check facility or venue</p>
 </details>
 <div class="codehilite"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">isValidExceptVenueFacility</span>
 </pre></div>
